@@ -11,19 +11,23 @@ exports.getAllTaskList = (req , res)=>{
             if(err){
                 res.send(err);
             }
+            else{
 
-            if(taskList == "")
-            {  
-                console.log('Empty Database ' , taskList);
-                res.json({status: 404 , message :'Empty Database', })   
+                 if(taskList =="")
+                {  
+                    console.log('Empty Database ' , taskList);
+                    res.json({status: 404 , message :'Empty Database', })   
+                }
+
+                else{
+                   console.log('taskList' , taskList);
+                    res.send(taskList);
+                    //res.json({status: 200 , taskData :taskList, })   
+
+                }
             }
 
-            if(taskList){
-               console.log('taskListzzz' , taskList);
-                res.send(taskList);
-                //res.json({status: 200 , taskData :taskList, })   
-
-            }
+          
     })
 }
 

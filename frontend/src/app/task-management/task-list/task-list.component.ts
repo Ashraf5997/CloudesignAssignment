@@ -19,11 +19,17 @@ export class TaskListComponent implements OnInit {
 
    public noTotalTask=0;
    public isFormVisible = false;
+   public ResData :any;
 
    countTotalTask(){
 
-        this.taskService.getAllTask().subscribe(data=>{
-        this.noTotalTask = Object.keys(data).length;
+        this.taskService.getAllTask().subscribe( data =>{
+          this.ResData = data;
+          if(this.ResData.status != 404){
+            this.noTotalTask = Object.keys(data).length; 
+          }else{
+            this.noTotalTask=0;
+          }
         this.taskService.CWC_PAGE_REFRESHED();
           
     });
