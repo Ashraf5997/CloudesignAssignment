@@ -1,0 +1,63 @@
+
+
+
+
+#mainDiv{
+   padding: 30px;
+    background-color: white;
+    color: rgb(86, 86, 97);
+}
+
+#card{
+    background-color: rgb(253, 246, 246);
+    box-shadow: 5px 5px 8px 3px rgb(134, 131, 131);
+}
+
+#btnClass{
+    background-color: rgb(16, 16, 63);
+}
+.button {
+    background-color: rgb(16, 16, 63);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:12px;
+    margin: 4px 2px;
+    padding:10px;
+  }
+
+.roundAddBtn {border-radius: 50%;}
+.roundAddBtn:hover{background-color: rgb(214, 85, 85);}
+h4{
+    color: rgb(16, 16, 63);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(228, 222, 222);
+  
+    padding:8px;
+    align-items: center;
+}
+/*
+#mainCard{
+  background-color: black;
+  padding: 10px;
+  align-items: center;
+}
+#cardContainer{
+   background-color: rgb(189, 189, 209);
+    border: none;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size:12px;
+    height: 1550px;
+     flex-direction: center;
+}*/
+
+
+
+
+

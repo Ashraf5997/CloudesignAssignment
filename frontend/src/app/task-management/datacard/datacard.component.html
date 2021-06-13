@@ -1,0 +1,117 @@
+
+
+<div class="container" cdkDropListGroup>
+    <div class="row"  >
+
+        <!--FIRST SLOT-->
+        <!--TO DO-->
+
+        <div  class="card"
+        cdkDropList
+        [cdkDropListData]="allOpenTask"
+       
+        (cdkDropListDropped)="DragAndDrop($event)"
+        
+        >
+            <div class="card-header"   >
+                <h2>TO DO TASK  <span style="color:rgb(24, 16, 58); border-radius:40px;background-color: white; padding:3px;">{{countToDo}}</span>  </h2>
+            </div>
+            <div class="cardBody"  *ngFor="let item of allOpenTask" >
+
+                <!--DRAG KIT--> 
+               <div   class="drag-kit" cdkDrag  >
+                  <div class="row">
+                       <div class="col-2">
+                            <div class="actionTool" >
+                                <i id ="toolHover" class="fa fa-trash-o" aria-hidden="true"(click)="deleteTask(item.taskId)" ></i>
+                                <i id ="toolHover" class="fa fa-pencil-square-o" aria-hidden="true" (click)="UpdateTask(item.taskId,item.taskDescription,item.taskTitle)" ></i>
+                                
+                            </div>
+                       </div>
+                       <div class="col-10">
+                           <p>Title :{{item.taskTitle}} </p>
+                           <p>Description :{{item.taskDescription}}</p> 
+                       </div>
+                  </div>
+               </div>
+
+            </div>
+        </div>
+
+
+        <!--SECOND SLOT-->
+        <!--IN PROGRESS-->
+
+        <div class="card"
+        cdkDropList
+        [cdkDropListData]="allProgressTask"
+       
+        (cdkDropListDropped)="DragAndDrop($event)"
+        >
+            <div class="card-header">
+                <h2>TASK IN PROGRESS <span style="color:rgb(24, 16, 58); border-radius:40px;background-color: white; padding:3px;">{{countInProgress}}</span> </h2>
+            </div>
+          
+            <div class="cardBody" *ngFor="let item of allProgressTask">
+
+                 <!--DRAG KIT-->
+                    <div  class="drag-kit"   cdkDrag >
+                        <div class="row" >
+                            <div class="col-2">
+                                <div class="actionTool" >
+                                    <i id ="toolHover" class="fa fa-trash-o" aria-hidden="true" (click)="deleteTask(item.taskId)"></i>
+                                    <i id ="toolHover" class="fa fa-pencil-square-o" aria-hidden="true" (click)="UpdateTask(item.taskId,item.taskDescription,item.taskTitle)" ></i>
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="col-10">
+                                <p>Title :{{item.taskTitle}}</p>
+                                <p>Description :{{item.taskDescription}}</p> 
+                            </div>
+                        </div>
+                    </div>         
+            </div>
+        </div>
+
+          <!--THIRD SLOT-->
+          <!--DONE-->
+
+          <div class="card"
+          cdkDropList
+          [cdkDropListData]="allCompletedTask"
+         
+          (cdkDropListDropped)="DragAndDrop($event)"
+          >
+              <div class="card-header">
+                  <h2>TASK DONE <span style="color:rgb(24, 16, 58); border-radius:40px;background-color: white; padding:3px;">{{countCompleted}}</span> </h2>
+              </div>
+            
+              <div class="cardBody" *ngFor="let item of allCompletedTask">
+  
+                   <!--DRAG KIT-->
+                      <div class="drag-kit"   cdkDrag >
+                          <div class="row" >
+                              <div class="col-2">
+                                  <div class="actionTool" >
+                                      <i id ="toolHover" class="fa fa-trash-o" aria-hidden="true" (click)="deleteTask(item.taskId)"></i>
+                                      <i id ="toolHover" class="fa fa-pencil-square-o" aria-hidden="true" (click)="UpdateTask(item.taskId,item.taskDescription,item.taskTitle)" ></i>
+                                  </div>
+                              </div>
+                          
+                              <div class="col-10">
+                                <p>Title :{{item.taskTitle}}</p>
+                                <p>Description :{{item.taskDescription}}</p> 
+                              </div>
+                          </div>
+                      </div>         
+              </div>
+          </div>
+
+
+    </div>
+</div>
+
+
+  
+  

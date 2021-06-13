@@ -1,0 +1,26 @@
+
+<!-------------HEADER------------>
+<app-header></app-header>
+
+
+<div id="mainDiv" class="container">
+    <div id="card" class="jumbotron">
+
+        <!-- Adding Task From -->
+        <app-task-input-form *ngIf="isFormVisible"></app-task-input-form>
+        
+        <button class="button roundAddBtn" (click)="displayForm()">
+
+            <i *ngIf=" ! isFormVisible" style="font-size: 25px;" class="fa fa-arrow-down" aria-hidden="true"></i>
+            <i *ngIf="isFormVisible" style="font-size: 25px;" class="fa fa-arrow-up" aria-hidden="true"></i>
+
+        </button>
+        <h4>LIST OF TOTAL TASK  <span style="color:rgb(24, 16, 58); border-radius:40px;background-color: white; padding:3px;">{{noTotalTask}}</span>  </h4>
+        <app-datacard ></app-datacard>
+              
+    </div>
+</div>
+
+
+
+  

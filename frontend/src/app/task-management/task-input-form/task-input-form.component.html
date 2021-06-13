@@ -1,0 +1,47 @@
+
+
+
+
+                
+                   <h4 *ngIf="saveMode">
+                    <i class="fa fa-file" aria-hidden="true"></i>
+                       ADD TASK
+                    </h4>
+                    <h4 *ngIf="editMode">
+                      <i class="fa fa-file" aria-hidden="true"></i>
+                         EDIT TASK
+                      </h4>
+                    <mat-progress-bar mode="determinate" [value]="count" *ngIf="processing" ></mat-progress-bar>
+                     
+                    <div class="FormContainer">
+
+                   <!--ERROR MSG-->
+                   <div  *ngIf="ErrMsg" class="alert alert-danger">
+                    <strong>All fields are mandatory! </strong> please fill the form properly.
+                  </div>
+
+                     
+                   <!--SUCCES MSG-->
+                   <div  *ngIf="SuccMsg" class="alert alert-success">
+                    <strong>Congrats ! </strong> you have add one more task successfully.
+                  </div>
+
+                  <div  *ngIf="updateMsg" class="alert alert-success">
+                    <strong>Congrats ! </strong> your task has been updated  successfully.
+                  </div>
+
+                     <div class="mb-3">
+                       <label class="form-label">Enter Task Title </label>
+                       <input type="text"  name="title" class="form-control" [(ngModel)]="title">
+                     </div>
+
+                    <div class="mb-3">
+                      <label  class="form-label">Enter Task Description</label>
+                      <textarea type="text" name="description" class="form-control" [(ngModel)]="description"></textarea>
+                    </div>
+                   
+                    <button *ngIf="saveMode" (click)="saveTask()"  id="btnClass" type="submit" class="btn btn-dark">SAVE TASK </button>
+                    <button *ngIf="editMode" (click)="saveTask()"  id="btnClass" type="submit" class="btn btn-dark">EDIT TASK </button>
+
+                  </div>
+  

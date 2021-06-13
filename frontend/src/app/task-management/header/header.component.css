@@ -1,0 +1,22 @@
+
+
+.headerClass{
+
+    background-color: rgb(16, 16, 63);
+    text-align: center;
+    padding-left: 10px;
+    
+
+}
+
+.textClass{
+    color: white;
+    font-weight:bold;
+    font-size:30px;
+   
+}
+
+a{color: white;}
+
+a:hover{ color: black;}
+

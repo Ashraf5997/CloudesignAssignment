@@ -1,0 +1,35 @@
+
+
+#mainDiv{
+    padding: 60px;
+    font-size: 25px;
+    background-color: rgb(235, 235, 235);
+    margin-top: 25px;
+    color: rgb(121, 121, 126);
+}
+
+#card{
+    background-color: rgb(252, 248, 248);
+    text-align: center;
+    padding: 10px;
+    padding-top: 15px;
+    box-shadow: 5px 5px 5px 5px rgb(97, 96, 96);
+}
+
+h1{
+    color:rgb(199, 71, 71);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+li{
+    list-style: none;
+}
+
+#footerDiv{
+    padding: 30px;
+    font-size: 15px;
+    background-color: rgb(235, 235, 235);
+    margin-top:10px;
+    color: rgb(121, 121, 126);
+}

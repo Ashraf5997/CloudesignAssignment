@@ -1,0 +1,26 @@
+
+
+
+
+
+#btnClass{
+    background-color: rgb(16, 16, 63);
+    float:right
+}
+#btnClass:hover{
+    background-color: rgb(214, 85, 85);
+}
+
+h4{
+    color: rgb(232, 232, 238);
+    background-color:rgb(16, 16, 63);
+    padding:10px;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.FormContainer{
+    padding: 15px;
+}
+
+
